@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>News Aggregator</title>
+  </head>
+
+  <body>
+    <h2>News Aggregator</h2>
+    <h3>Check Out Some User Submitted Articles</h3>
+
+<ul>
+
+  <% @articles.each do |article| %>
+  <ul>
+    <li><%= "Article Title: #{article[0]}" %></li>
+    <li>Article URL:
+    <a href="<%=article[1]%>" target="_blank"><%=article[1]%></a></li>
+    <li><%= "Article Description: #{article[2]}" %></li>
+    <br>
+  </ul>
+    <% end %>
+
+
+
+</ul>
+
+  <p><a href="/">Take Me Home</a></p>
+</body>
+</html>
